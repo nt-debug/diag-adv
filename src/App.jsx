@@ -191,7 +191,7 @@ function ThankYou({ prenom, score, onRestart }) {
         Votre analyse est en route. Si vous souhaitez aller plus loin et transformer ce diagnostic en plan d'action concret, je suis disponible.
       </p>
       <div style={{ width: 48, height: 2, background: COLORS.sage, margin: "0 auto 32px" }} />
-      <a href="mailto:contact@nassma.fr"
+      <a href="mailto:nassma.toufaili@gmail.com"
         style={{ display: "inline-block", background: COLORS.sage, color: COLORS.white, fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: 15, padding: "14px 32px", borderRadius: 4, textDecoration: "none", marginBottom: 24 }}>
         {level.cta} →
       </a>
