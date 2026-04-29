@@ -44,16 +44,14 @@ exports.handler = async (event) => {
         "api-key": BREVO_API_KEY,
       },
       body: JSON.stringify({
-        email,
-        attributes: {
-          PRENOM: prenom,
-          // SCORE_ADV doit exister comme attribut personnalisé dans votre compte Brevo
-          // Créez-le via : Contacts > Attributs > Ajouter un attribut > Nombre
-          SCORE_ADV: score,
-        },
-        updateEnabled: true, // met à jour le contact s'il existe déjà
-      }),
-    });
+  email,
+  attributes: {
+    PRENOM: prenom,
+    SCORE_ADV: score,
+  },
+  listIds: [3],
+  updateEnabled: true,
+}),
 
     // Brevo renvoie 201 (créé) ou 204 (mis à jour)
     if (response.status === 201 || response.status === 204) {
